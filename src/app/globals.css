@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
 @theme inline {
   --color-background: #131318;
   --color-foreground: #e4e1e9;
