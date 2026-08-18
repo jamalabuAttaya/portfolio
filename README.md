@@ -1,106 +1,82 @@
-# 🚀 Jamal Abu Attaya | Modern Portfolio
+# Jamal Hassan Abu Attaya — Engineering Security Portfolio
 
-<div align="center">
-  <img src="https://jebril-aabed-portfolio.vercel.app/projects/protofolio.png" alt="Portfolio Preview" width="800" style="border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-  <p align="center">
-    <br />
-    <a href="https://jebril-aabed-portfolio.vercel.app/"><strong>Explore the Live Demo »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/jamalabuAttaya/Jebril-Aabed-Portfolio/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/jamalabuAttaya/Jebril-Aabed-Portfolio/issues">Request Feature</a>
-  </p>
-</div>
+موقع شخصي احترافي يقدّم الهوية الأساسية: **Software & Application Security**، مع خلفية أكاديمية في الحوسبة النقالة وأمن المعلومات.
 
----
+## التشغيل على Windows
 
-## 🌟 Overview
+المشروع مضبوط على Webpack لتجنب مشكلة SWC/Turbopack التي ظهرت على جهازك.
 
-A high-performance, visually stunning personal portfolio built with **Next.js 15**, **React 19**, **Tailwind CSS**, and **Framer Motion**. This project showcases my journey as a Frontend Developer, featuring interactive project displays, a responsive design system, and a smooth user experience.
-
-### 🛠 Tech Stack
-
-![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)
-![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
-
----
-
-## ✨ Key Features
-
-- **🚀 Performance-First**: Built on Next.js 15 with Server Components for lightning-fast load times.
-- **🎨 Modern UI/UX**: Clean, minimalist, and premium design with a focus on typography and spacing.
-- **🎭 Fluid Animations**: Interactive elements powered by Framer Motion for a smooth browsing experience.
-- **📱 Fully Responsive**: Optimized for all devices, from mobile phones to high-resolution desktops.
-- **📧 Contact Integration**: Working contact system to easily reach out for collaborations.
-- **🔍 SEO Optimized**: Structured data and meta tags for better visibility on search engines.
-
----
-
-## 📂 Project Structure
-
-```text
-src/
-├── app/            # Next.js App Router & API routes
-├── components/     # High-quality reusable UI components
-├── data/           # Centralized portfolio content & data
-├── styles/         # Global styles & Tailwind configuration
-└── assets/         # Optimized images and icons
-```
-
----
-
-## 🚀 Getting Started
-
-Follow these steps to set up the project locally:
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/jamalabuAttaya/Jebril-Aabed-Portfolio.git
-```
-
-### 2. Install dependencies
-```bash
+```powershell
 npm install
-```
-
-### 3. Environment Setup
-Create a `.env.local` file in the root directory:
-```env
-# Add any required API keys or service IDs here
-```
-
-### 4. Start the development server
-```bash
 npm run dev
 ```
-Navigate to `http://localhost:3000` to see the live application.
 
----
+ثم افتح:
 
-## 🏗 Projects Showcased
+```text
+http://localhost:3000
+```
 
-- **Academic Library**: A comprehensive platform for university study materials.
-- **Weather App**: Real-time weather forecasting with a clean UI.
-- **Educational Platform**: Interactive course navigation and tracking.
-- **DevBoard**: Developer productivity tool for Kanban and snippet tracking.
+فحص النسخة النهائية قبل النشر:
 
----
+```powershell
+npm run verify
+```
 
-## 📬 Contact & Connect
+أوامر الفحص المنفصلة:
 
-- **Email**: [jamalabuattaya@gmail.com](mailto:jamalabuattaya@gmail.com)
-- **LinkedIn**: [Jamal Abu Attaya](https://www.linkedin.com/in/jebril-aabed)
-- **GitHub**: [@jebrilabed](https://github.com/jamalabuAttaya)
-- **WhatsApp**: [Contact Me](https://wa.me/qr/OIKO6MCOWL6QM1)
+```powershell
+npm run typecheck
+npm run lint
+npm test
+npm run build
+```
 
----
+## أهم مسارات التعديل
 
-<div align="center">
-  <p>Show some ❤️ by starring this repository!</p>
-  <img src="https://img.shields.io/github/stars/jebrilabed/Jebril-Aabed-Portfolio?style=social" alt="GitHub stars">
-</div>
+- `app/data/portfolio.ts`: الاسم، النبذة، الساعات، المهارات، التعليم، الشهادات، المشاريع والروابط.
+- `app/globals.css`: نظام التصميم، الألوان، التخطيط والتجاوب.
+- `app/motion.css`: طبقة الحركة، الزجاج، التوهجات والحركات الدقيقة.
+- `app/components/ExperienceLayer.tsx`: شبكة العقد المتحركة، وهج المؤشر وشريط تقدّم الصفحة.
+- `app/components/LanguageProvider.tsx`: تبديل العربية والإنجليزية وحفظ لغة الزائر وضبط اتجاه الصفحة.
+- `app/i18n/content.ts`: جميع نصوص الواجهة باللغتين في مكان واحد.
+- `app/components/InteractionLayer.tsx`: إضاءة المؤشر، نبض النقر، وإمالة البطاقات التفاعلية.
+- `app/components/`: جميع أقسام الواجهة.
+- `public/My-Photo.webp`: الصورة الشخصية.
+- `public/projects/`: صور المشاريع.
+- `public/Jamal-Hassan-Abu-Attaya-Formal-CV-2026.pdf`: السيرة الذاتية التي ينزّلها الزر.
+- `app/api/contact/route.ts`: واجهة إرسال رسائل نموذج التواصل.
+
+## تفعيل نموذج التواصل
+
+انسخ `.env.example` إلى `.env.local` وأضف بيانات Resend الصحيحة:
+
+```env
+NEXT_PUBLIC_SITE_URL=https://your-domain.example
+RESEND_API_KEY=re_your_api_key
+RESEND_FROM_EMAIL=Portfolio <contact@your-verified-domain.example>
+CONTACT_TO_EMAIL=jamalabuattaya@gmail.com
+```
+
+لا ترفع `.env.local` أو مفتاح API إلى GitHub. عند غياب المفتاح يبقى رابط البريد المباشر متاحاً، ويعرض النموذج رسالة آمنة بدلاً من كشف تفاصيل الخادم.
+
+## قرارات الجودة والأمان
+
+- SVG محلية للأيقونات؛ لا يعتمد الموقع على خط Material Symbols خارجي.
+- خلفية Canvas هندسية خفيفة مع حد أقصى ثابت للعقد وكثافة بكسلات مقيدة.
+- إيقاف الرسم المتواصل عند إخفاء الصفحة، وتعطيل الحركة تلقائياً عند تفعيل `prefers-reduced-motion`.
+- شريط إشارات، رادار أمني، وهج تفاعلي وحركات دخول متعددة دون مكتبة حركة خارجية.
+- دعم عربي وإنجليزي كامل مع `RTL/LTR` وحفظ اختيار الزائر محلياً.
+- حزم بيانات متحركة داخل شبكة الخلفية، ومدارات أمنية، وإضاءة موضعية تتبع المؤشر.
+- تحقق من نوع وحجم ومحتوى طلب نموذج التواصل.
+- حماية من الرسائل الآلية عبر honeypot وحد زمني أدنى.
+- تعقيم HTML قبل إنشاء رسالة البريد.
+- فحص Origin ورسائل أخطاء عامة وعدم تخزين الاستجابات.
+- ترويسات أمان أساسية في `next.config.ts`.
+- دعم لوحة المفاتيح، حالات focus واضحة، و`prefers-reduced-motion`.
+- صور WebP مباشرة لتفادي فشل محولات الصور في بعض بيئات النشر.
+- بيانات Metadata وOpen Graph وSchema.org وrobots وsitemap.
+
+## ملاحظة مهنية
+
+يعرض الموقع المهارات المكتسبة من الدراسة والمشاريع بصياغة دقيقة، ويميّز بين الأساس الأكاديمي والخبرة العملية حتى يبقى الملف المهني قوياً وصادقاً أمام أصحاب العمل.
