@@ -11,8 +11,9 @@ type NodePoint = {
   phase: number;
 };
 
-const CYAN = { r: 101, g: 230, b: 244 };
-const VIOLET = { r: 159, g: 148, b: 255 };
+const CYAN = { r: 0, g: 229, b: 255 };
+const VIOLET = { r: 155, g: 123, b: 255 };
+const EMERALD = { r: 0, g: 245, b: 160 };
 
 export default function ExperienceLayer() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -155,7 +156,7 @@ export default function ExperienceLayer() {
         }
 
         const pulse = animate ? Math.sin(time * 0.00065 + node.phase) * 0.35 + 0.65 : 0.65;
-        const color = index % 6 === 0 ? VIOLET : CYAN;
+        const color = index % 9 === 0 ? EMERALD : index % 6 === 0 ? VIOLET : CYAN;
         drawingContext.beginPath();
         drawingContext.arc(node.x, node.y, node.radius + pulse * 0.45, 0, Math.PI * 2);
         drawingContext.fillStyle = `rgba(${color.r}, ${color.g}, ${color.b}, ${0.22 + pulse * 0.32})`;

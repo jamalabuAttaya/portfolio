@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import type { CSSProperties } from "react";
 import { Icon } from "@/app/components/Icon";
 import { useLanguage } from "@/app/components/LanguageProvider";
@@ -12,8 +13,18 @@ export default function Hero() {
 
   return (
     <section className="hero engineering-grid" id="home">
-      <div className="hero__orb hero__orb--one" /><div className="hero__orb hero__orb--two" />
-      <div className="hero__data-stream" aria-hidden="true"><span>01001101</span><span>AUTH / VERIFIED</span><span>OWASP / API1</span><span>SECURE BY DESIGN</span></div>
+      <div className="hero__cover" aria-hidden="true">
+        <Image
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          src="/portfolio-cover-2026.webp"
+          unoptimized
+        />
+      </div>
+      <div className="hero__cover-overlay" aria-hidden="true" />
+      <div className="hero__data-stream" aria-hidden="true"><span>JAVA / ANDROID</span><span>HTTP / JSON</span><span>OWASP API1</span><span>TCP / IP</span></div>
       <div className="site-container hero__layout">
         <Reveal className="hero__copy">
           <div className="availability"><span className="availability__dot" />{hero.availability}</div>
@@ -24,7 +35,7 @@ export default function Hero() {
             <a className="button button--primary" href="#security" data-interactive>{hero.explore} <Icon name="arrow" size={18} /></a>
             <a className="button button--secondary" href="#contact" data-interactive>{hero.contact}</a>
           </div>
-          <div className="hero__identity"><span>{locale === "ar" ? "جمال حسان أبو عطايا" : portfolioData.name}</span><span>{hero.role}</span></div>
+          <div className="hero__identity"><span>{locale === "ar" ? portfolioData.nameArabic : portfolioData.name}</span><span>{hero.role}</span></div>
         </Reveal>
 
         <Reveal className="system-panel" delay={140} variant="scale">

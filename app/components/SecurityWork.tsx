@@ -12,7 +12,7 @@ export default function SecurityWork() {
   return (
     <section className="site-section security-section" id="security"><div className="site-container">
       <SectionHeader index="02" eyebrow={security.eyebrow} title={security.title} description={security.description} />
-      <div className="security-grid">{portfolioData.securityWork.map((item, index) => {
+      <div className="security-grid">{portfolioData.practicalWork.map((item, index) => {
         const text = security.items[index];
         return (
           <Reveal className="security-card" delay={index * 80} key={item.code}>

@@ -5,14 +5,14 @@ import { Icon } from "@/app/components/Icon";
 import { useLanguage } from "@/app/components/LanguageProvider";
 import { portfolioData } from "@/app/data/portfolio";
 
-const ids = ["home", "about", "security", "skills", "education", "projects"] as const;
+const ids = ["home", "about", "security", "skills", "education", "certificates", "projects"] as const;
 
 export default function Navbar() {
   const { copy, locale, toggleLanguage } = useLanguage();
   const [active, setActive] = useState("home");
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const labels = [copy.nav.home, copy.nav.about, copy.nav.security, copy.nav.skills, copy.nav.education, copy.nav.projects];
+  const labels = [copy.nav.home, copy.nav.about, copy.nav.security, copy.nav.skills, copy.nav.education, copy.nav.certificates, copy.nav.projects];
 
   useEffect(() => {
     const update = () => setScrolled(window.scrollY > 24);
@@ -42,7 +42,7 @@ export default function Navbar() {
         <a className="brand" href="#home" aria-label={copy.nav.homeLabel}>
           <span className="brand__mark">{portfolioData.initials}</span>
           <span className="brand__text">
-            <strong>{locale === "ar" ? "جمال أبو عطايا" : portfolioData.shortName}</strong>
+            <strong>{locale === "ar" ? portfolioData.nameArabic : portfolioData.shortName}</strong>
             <small>{copy.nav.brand}</small>
           </span>
         </a>

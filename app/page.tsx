@@ -1,4 +1,5 @@
 import About from "@/app/components/About";
+import Certificates from "@/app/components/Certificates";
 import Contact from "@/app/components/Contact";
 import Education from "@/app/components/Education";
 import ExperienceLayer from "@/app/components/ExperienceLayer";
@@ -24,6 +25,7 @@ export default function Home() {
         <SecurityWork />
         <Skills />
         <Education />
+        <Certificates />
         <Projects />
         <Contact />
       </main>

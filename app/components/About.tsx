@@ -15,7 +15,7 @@ export default function About() {
       <SectionHeader index="01" eyebrow={about.eyebrow} title={about.title} description={about.description} />
       <div className="about__layout">
         <Reveal className="portrait-frame" variant="left"><div className="portrait-frame__interactive" data-interactive>
-          <div className="portrait-frame__rail"><span>JAA / 2026</span><span>31.50° N</span></div>
+          <div className="portrait-frame__rail"><span>JHA / 2026</span><span>PROFESSIONAL PROFILE</span></div>
           <div className="portrait-frame__image"><Image alt={about.portraitAlt} fill priority={false} sizes="(max-width: 760px) 100vw, 42vw" src="/My-Photo.webp" unoptimized /></div>
           <div className="portrait-frame__caption"><span>{copy.hero.role}</span><Icon name="shield" size={18} /></div>
         </div></Reveal>
@@ -24,7 +24,7 @@ export default function About() {
           <div className="about__principles">{about.principles.map(([title, description], index) => (
             <article data-interactive key={title}><span>{String(index + 1).padStart(2, "0")}</span><h3>{title}</h3><p>{description}</p></article>
           ))}</div>
-          <div className="about__actions"><a className="button button--primary" download href={portfolioData.cv} data-interactive><Icon name="download" size={18} /> {about.download}</a><a className="text-link" href={portfolioData.socials.linkedin} target="_blank" rel="noreferrer">{about.linkedin} <Icon name="external" size={16} /></a></div>
+          <div className="about__actions"><a className="button button--primary" download href={portfolioData.cv} data-interactive><Icon name="download" size={18} /> {about.download}</a><a className="text-link" href={portfolioData.socials.linkedin} target="_blank" rel="noopener noreferrer">{about.linkedin} <Icon name="external" size={16} /></a></div>
         </Reveal>
       </div>
     </div></section>

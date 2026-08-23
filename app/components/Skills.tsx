@@ -29,6 +29,10 @@ export default function Skills() {
           <div className="strengths__list">{skills.strengths.map((strength, index) => <span key={strength}><b>{String(index + 1).padStart(2, "0")}</b>{strength}</span>)}</div>
         </div>
       </Reveal>
+      <Reveal className="languages-panel" delay={200}>
+        <div><span>{skills.languages}</span><Icon name="book" size={20} /></div>
+        <ul>{skills.languageItems.map((language) => <li key={language}>{language}</li>)}</ul>
+      </Reveal>
     </div></section>
   );
 }
