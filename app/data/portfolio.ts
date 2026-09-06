@@ -23,7 +23,7 @@ export const portfolioData = {
   cv: "/Jamal-Hassan-Abu-Attaya-CV-2026.pdf",
   socials: {
     github: "https://github.com/jamalabuAttaya",
-    linkedin: "https://www.linkedin.com/in/jamal-abu-attaya",
+    linkedin: "https://www.linkedin.com/in/jamal-abuattaya/",
     whatsapp: "https://wa.me/qr/OIKO6MCOWL6QM1",
     portfolio: "https://jamal-abuattaya-portfolio.shahdfalyouna22.chatgpt.site",
   },
