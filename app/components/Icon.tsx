@@ -1,7 +1,7 @@
 import type { IconName } from "@/app/data/portfolio";
 
 type IconProps = {
-  name: IconName | "arrow" | "external" | "download" | "mail" | "github" | "linkedin" | "message" | "send" | "menu" | "close" | "chevron" | "check";
+  name: IconName | "arrow" | "external" | "download" | "mail" | "github" | "linkedin" | "message" | "send" | "menu" | "close" | "chevron" | "check" | "sun" | "moon";
   size?: number;
   className?: string;
 };
@@ -53,6 +53,10 @@ export function Icon({ name, size = 20, className = "" }: IconProps) {
         return <path d="m18 15-6-6-6 6"/>;
       case "check":
         return <path d="m5 12 4 4L19 6"/>;
+      case "sun":
+        return <><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></>;
+      case "moon":
+        return <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/>;
     }
   })();
 

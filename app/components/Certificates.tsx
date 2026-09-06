@@ -49,7 +49,7 @@ export default function Certificates() {
                       alt=""
                       fill
                       sizes="(max-width: 720px) 100vw, (max-width: 900px) 50vw, 33vw"
-                      src={certificate.image}
+                      src={locale === "ar" ? certificate.imageAr : certificate.imageEn}
                       unoptimized
                     />
                     <span><Icon name="award" size={16} /> {certificate.tag}</span>

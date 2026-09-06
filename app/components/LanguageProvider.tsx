@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, type ReactNode } from "react";
 import { dictionaries, type Locale } from "@/app/i18n/content";
 
 type LanguageContextValue = {
@@ -8,24 +8,15 @@ type LanguageContextValue = {
   dir: "ltr" | "rtl";
   copy: (typeof dictionaries)[Locale];
   toggleLanguage: () => void;
+  alternateHref: "/" | "/ar";
 };
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 const STORAGE_KEY = "jamal-portfolio-language";
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocale] = useState<Locale>("en");
+export function LanguageProvider({ children, initialLocale }: { children: ReactNode; initialLocale: Locale }) {
+  const locale = initialLocale;
   const switchingRef = useRef(false);
-
-  useEffect(() => {
-    let saved: string | null = null;
-    try { saved = window.localStorage.getItem(STORAGE_KEY); } catch { saved = null; }
-    const preferred: Locale = saved === "ar" || saved === "en"
-      ? saved
-      : navigator.language.toLowerCase().startsWith("ar") ? "ar" : "en";
-    const frame = window.requestAnimationFrame(() => setLocale(preferred));
-    return () => window.cancelAnimationFrame(frame);
-  }, []);
 
   useEffect(() => {
     document.documentElement.lang = locale;
@@ -40,19 +31,18 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     const root = document.documentElement;
     root.classList.add("language-changing");
     window.setTimeout(() => {
-      setLocale((current) => current === "en" ? "ar" : "en");
-      window.requestAnimationFrame(() => {
-        root.classList.remove("language-changing");
-        switchingRef.current = false;
-      });
+      const nextLocale = locale === "en" ? "ar" : "en";
+      try { window.localStorage.setItem(STORAGE_KEY, nextLocale); } catch { /* Preference storage may be unavailable. */ }
+      window.location.assign(nextLocale === "ar" ? "/ar" : "/");
     }, 120);
-  }, []);
+  }, [locale]);
 
   const value = useMemo<LanguageContextValue>(() => ({
     locale,
     dir: locale === "ar" ? "rtl" : "ltr",
     copy: dictionaries[locale],
     toggleLanguage,
+    alternateHref: locale === "ar" ? "/" : "/ar",
   }), [locale, toggleLanguage]);
 
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;

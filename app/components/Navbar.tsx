@@ -3,12 +3,14 @@
 import { useEffect, useState } from "react";
 import { Icon } from "@/app/components/Icon";
 import { useLanguage } from "@/app/components/LanguageProvider";
+import { useTheme } from "@/app/components/ThemeProvider";
 import { portfolioData } from "@/app/data/portfolio";
 
 const ids = ["home", "about", "security", "skills", "education", "certificates", "projects"] as const;
 
 export default function Navbar() {
-  const { copy, locale, toggleLanguage } = useLanguage();
+  const { copy, locale, toggleLanguage, alternateHref } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
   const [active, setActive] = useState("home");
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -55,9 +57,12 @@ export default function Navbar() {
         </nav>
 
         <div className="nav-actions">
-          <button className="language-toggle" onClick={toggleLanguage} type="button" aria-label={copy.language.switchLabel} data-interactive>
-            <span className="language-toggle__globe" aria-hidden="true">◎</span><b>{copy.language.short}</b>
+          <button className="theme-toggle" onClick={toggleTheme} type="button" aria-label={theme === "dark" ? copy.theme.light : copy.theme.dark} title={theme === "dark" ? copy.theme.light : copy.theme.dark} data-interactive>
+            <Icon name={theme === "dark" ? "sun" : "moon"} size={18} />
           </button>
+          <a className="language-toggle" href={alternateHref} onClick={(event) => { event.preventDefault(); toggleLanguage(); }} aria-label={copy.language.switchLabel} hrefLang={locale === "ar" ? "en" : "ar"} data-interactive>
+            <span className="language-toggle__globe" aria-hidden="true">◎</span><b>{copy.language.short}</b>
+          </a>
           <button aria-expanded={open} aria-label={open ? copy.nav.close : copy.nav.open} className="nav-toggle" onClick={() => setOpen((value) => !value)} type="button">
             <Icon name={open ? "close" : "menu"} size={22} />
           </button>

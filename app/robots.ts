@@ -2,5 +2,9 @@ import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
   const site = process.env.NEXT_PUBLIC_SITE_URL || "https://jamal-abuattaya-portfolio.shahdfalyouna22.chatgpt.site";
-  return { rules: { userAgent: "*", allow: "/", disallow: "/api/" }, sitemap: `${site}/sitemap.xml` };
+  return {
+    rules: { userAgent: "*", allow: "/", disallow: "/api/" },
+    sitemap: `${site}/sitemap.xml`,
+    host: site,
+  };
 }

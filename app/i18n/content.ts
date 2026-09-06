@@ -1,6 +1,7 @@
 export const dictionaries = {
   en: {
     language: { switchLabel: "Switch to Arabic", short: "AR" },
+    theme: { light: "Switch to light mode", dark: "Switch to dark mode" },
     nav: {
       home: "Home",
       about: "Profile",
@@ -8,7 +9,7 @@ export const dictionaries = {
       skills: "Foundation",
       education: "Education",
       certificates: "Certificates",
-      projects: "Project",
+      projects: "Projects",
       contact: "Contact",
       open: "Open navigation",
       close: "Close navigation",
@@ -117,7 +118,7 @@ export const dictionaries = {
     certificates: {
       eyebrow: "Certificates",
       title: "Original certificates, available for direct review.",
-      description: "Seven completed certificates in Java, cybersecurity, system protection, and artificial intelligence. Each card opens the original certificate PDF in the selected language when available.",
+      description: "Eight completed certificates in Java, cybersecurity, system protection, and artificial intelligence. Each card opens the original certificate PDF and preview in the selected language when available.",
       verified: "Original PDF",
       view: "Open certificate",
       items: [
@@ -128,16 +129,25 @@ export const dictionaries = {
         { title: "Cyber Security Attack Techniques", issuer: "Edraak", date: "22 Aug 2026" },
         { title: "Protect Systems from Penetrations", issuer: "Edraak", date: "22 Aug 2026" },
         { title: "Introduction to Cyber Security", issuer: "Edraak", date: "22 Aug 2026" },
+        { title: "Artificial Intelligence in the Workplace: Tools and Practical Applications", issuer: "Edraak & Crescent Petroleum", date: "24 Aug 2026" },
       ],
     },
     projects: {
-      eyebrow: "Additional front-end project",
-      title: "Alasema Restaurant — React.js.",
-      description: "One live project, shown with its real interface and direct production link.",
+      eyebrow: "Selected production work",
+      title: "Bilingual products built for real use.",
+      description: "Three live projects with their real interfaces, language-matched previews, and direct production links.",
       items: [
         {
           name: "Alasema Restaurant",
-          description: "A responsive React.js website for Alasema Restaurant in Nuseirat, Gaza, designed for a clear Arabic browsing experience across mobile and desktop.",
+          description: "A bilingual, responsive React.js website for Alasema Restaurant in Nuseirat, Gaza, with a clear menu, restaurant information, gallery, and direct contact paths.",
+        },
+        {
+          name: "Shahd Falyouna — AI & Data Science Portfolio",
+          description: "A bilingual, responsive portfolio for an Artificial Intelligence and Data Science student, presenting education, skills, projects, and contact information in a focused professional interface.",
+        },
+        {
+          name: "Dev Nexus Academy",
+          description: "A bilingual technical learning platform that organizes courses, public books, articles, and roadmaps across programming, cybersecurity, data, and cloud topics.",
         },
       ],
       live: "Visit live project",
@@ -171,6 +181,7 @@ export const dictionaries = {
   },
   ar: {
     language: { switchLabel: "التبديل إلى الإنجليزية", short: "EN" },
+    theme: { light: "التبديل إلى الوضع الفاتح", dark: "التبديل إلى الوضع الداكن" },
     nav: {
       home: "الرئيسية",
       about: "الملف المهني",
@@ -178,7 +189,7 @@ export const dictionaries = {
       skills: "الأساس التقني",
       education: "التعليم",
       certificates: "الشهادات",
-      projects: "المشروع",
+      projects: "المشاريع",
       contact: "التواصل",
       open: "فتح قائمة التنقل",
       close: "إغلاق قائمة التنقل",
@@ -287,7 +298,7 @@ export const dictionaries = {
     certificates: {
       eyebrow: "الشهادات",
       title: "الشهادات الأصلية متاحة للمراجعة المباشرة.",
-      description: "سبع شهادات مكتملة في Java والأمن السيبراني وحماية الأنظمة والذكاء الاصطناعي. تفتح كل بطاقة ملف الشهادة الأصلي باللغة المختارة عند توفره.",
+      description: "ثماني شهادات مكتملة في Java والأمن السيبراني وحماية الأنظمة والذكاء الاصطناعي. تفتح كل بطاقة ملف الشهادة الأصلي ومعاينته باللغة المختارة عند توفرهما.",
       verified: "ملف أصلي",
       view: "فتح الشهادة",
       items: [
@@ -298,16 +309,25 @@ export const dictionaries = {
         { title: "تقنيات الهجوم في الأمن السيبراني", issuer: "إدراك", date: "22 أغسطس 2026" },
         { title: "حماية الأنظمة من الاختراقات", issuer: "إدراك", date: "22 أغسطس 2026" },
         { title: "مقدمة في الأمن السيبراني", issuer: "إدراك", date: "22 أغسطس 2026" },
+        { title: "الذكاء الاصطناعي في بيئة العمل: الأدوات والتطبيقات العملية", issuer: "إدراك ونفط الهلال", date: "24 أغسطس 2026" },
       ],
     },
     projects: {
-      eyebrow: "مشروع واجهات إضافي",
-      title: "مطعم العاصمة — React.js.",
-      description: "مشروع حي واحد، مع واجهته الحقيقية ورابطه المباشر.",
+      eyebrow: "أعمال إنتاجية مختارة",
+      title: "منتجات ثنائية اللغة مبنية للاستخدام الحقيقي.",
+      description: "ثلاثة مشاريع حية بواجهاتها الفعلية، وصور معاينة متوافقة مع اللغة، وروابط إنتاج مباشرة.",
       items: [
         {
           name: "مطعم العاصمة",
-          description: "موقع متجاوب مبني باستخدام React.js لمطعم العاصمة في النصيرات، غزة، ومصمم لتجربة تصفح عربية واضحة على الهاتف والكمبيوتر.",
+          description: "موقع ثنائي اللغة ومتجاوب مبني باستخدام React.js لمطعم العاصمة في النصيرات، غزة، ويعرض القائمة ومعلومات المطعم والمعرض ووسائل التواصل المباشر.",
+        },
+        {
+          name: "ملف شهد فليونة — الذكاء الاصطناعي وعلوم البيانات",
+          description: "ملف مهني ثنائي اللغة ومتجاوب لطالبة ذكاء اصطناعي وعلوم بيانات، يعرض التعليم والمهارات والمشاريع ووسائل التواصل ضمن واجهة مهنية واضحة.",
+        },
+        {
+          name: "أكاديمية Dev Nexus",
+          description: "منصة تقنية ثنائية اللغة تنظّم الكورسات والكتب العامة والمقالات وخرائط الطريق في البرمجة والأمن السيبراني والبيانات والسحابة.",
         },
       ],
       live: "زيارة المشروع",
