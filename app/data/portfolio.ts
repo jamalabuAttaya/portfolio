@@ -232,6 +232,16 @@ export const portfolioData = {
       imageAr: "/projects/dev-nexus-academy-ar.webp",
       live: "https://dev-nexus-academy.vercel.app",
     },
+    {
+      name: "Dr. Adham AbuAttaya Portfolio",
+      number: "04",
+      description: "A bilingual medical portfolio presenting clinical experience, areas of practice, education, credentials, research, and professional contact information.",
+      tags: ["Next.js", "Medical Portfolio", "Bilingual UI", "Responsive Design"],
+      imageEn: "/projects/dr-adham-portfolio-en.png",
+      imageAr: "/projects/dr-adham-portfolio-ar.png",
+      live: "https://dr-adham-portfolio.vercel.app",
+    },
   ],
   languages: ["Arabic (native)", "English (academic and technical communication)"],
 } as const;
+
