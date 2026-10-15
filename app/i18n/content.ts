@@ -135,7 +135,7 @@ export const dictionaries = {
     projects: {
       eyebrow: "Selected production work",
       title: "Bilingual products built for real use.",
-      description: "Three live projects with their real interfaces, language-matched previews, and direct production links.",
+      description: "Four live projects with their real interfaces, language-matched previews, and direct production links.",
       items: [
         {
           name: "Alasema Restaurant",
@@ -148,6 +148,10 @@ export const dictionaries = {
         {
           name: "Dev Nexus Academy",
           description: "A bilingual technical learning platform that organizes courses, public books, articles, and roadmaps across programming, cybersecurity, data, and cloud topics.",
+        },
+        {
+          name: "Dr. Adham AbuAttaya — Medical Portfolio",
+          description: "A bilingual medical portfolio for Dr. Adham AbuAttaya, presenting clinical experience, areas of practice, education, credentials, research, and professional contact information in a calm, responsive interface.",
         },
       ],
       live: "Visit live project",
@@ -315,7 +319,7 @@ export const dictionaries = {
     projects: {
       eyebrow: "أعمال إنتاجية مختارة",
       title: "منتجات ثنائية اللغة مبنية للاستخدام الحقيقي.",
-      description: "ثلاثة مشاريع حية بواجهاتها الفعلية، وصور معاينة متوافقة مع اللغة، وروابط إنتاج مباشرة.",
+      description: "أربعة مشاريع حية بواجهاتها الفعلية، وصور معاينة متوافقة مع اللغة، وروابط إنتاج مباشرة.",
       items: [
         {
           name: "مطعم العاصمة",
@@ -328,6 +332,10 @@ export const dictionaries = {
         {
           name: "أكاديمية Dev Nexus",
           description: "منصة تقنية ثنائية اللغة تنظّم الكورسات والكتب العامة والمقالات وخرائط الطريق في البرمجة والأمن السيبراني والبيانات والسحابة.",
+        },
+        {
+          name: "د. أدهم أبو عطايا — ملف مهني طبي",
+          description: "ملف مهني طبي ثنائي اللغة للدكتور أدهم أبو عطايا، يعرض الخبرة السريرية ومجالات الممارسة والتعليم والشهادات والخبرة الأكاديمية ووسائل التواصل ضمن واجهة هادئة ومتجاوبة.",
         },
       ],
       live: "زيارة المشروع",
@@ -363,3 +371,4 @@ export const dictionaries = {
 
 export type Locale = keyof typeof dictionaries;
 export type Dictionary = (typeof dictionaries)[Locale];
+
